@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body style="background-color:powderblue">
+<center>
+<h3>Welcome to Ninja Program</h3><br/><br/>
+
+</center>
+<div id="button">
+<center>
+<p> We want to Record Your Details.<br/> Please click on the below Button</p>
+
+<button onclick="callWelcome()">Click Here</button>
+</center>
+</div>
+<div id="demo" hidden>
+
+	<form name="javaform" method="POST" action="" onsubmit="return validate()">
+	<p>Enter ur FName : </p> <input id="fname" type="text" name="fname" value=""/>
+	<p>Enter ur LName : </p><input id="lname" type="text" name="lname" value=""/>
+	<input type="submit" name="submit" value="submit" onclick="validate()"/>
+	</form>
+
+</div>
+
+
+<script>
+function callWelcome() {
+	document.getElementById("demo").style.display="block";	
+ // document.getElementById("welcometext").innerHTML = "Welcome to Javascript Hands On";
+  document.getElementById("button").style.display="none";
+}
+function validate() {
+	document.write("Heloo" + "&nbsp;" + document.getElementById("fname").value + "&nbsp;" + document.getElementById("lname").value);
+}
+</script>
+</body>
+</html>

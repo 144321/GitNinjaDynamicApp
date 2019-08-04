@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+<h3>HTML and Javascript Example</h3>
+<div id="button">
+<button onclick="callWelcome()">Click me</button>
+</div>
+<div id="demo" hidden>
+	<p id="welcometext" hidden></p>
+	<p>Enter ur FName : </p> <input id="fname" type="text" name="fname" value=""/>
+	<p>Enter ur LName : </p><input id="lname" type="text" name="lname" value=""/>
+	<input type="submit" name="submit" value="submit" onclick="validate()"/>
+
+</div>
+
+
+<script>
+function callWelcome() {
+	document.getElementById("demo").style.display="block";	
+  document.getElementById("welcometext").innerHTML = "Welcome to Javascript Hands On";
+  document.getElementById("button").style.display="none";
+}
+function validate() {
+	document.write("Heloo" + "&nbsp;" + document.getElementById("fname").value + "&nbsp;" + document.getElementById("lname").value);
+}
+</script>
+</body>
+</html>

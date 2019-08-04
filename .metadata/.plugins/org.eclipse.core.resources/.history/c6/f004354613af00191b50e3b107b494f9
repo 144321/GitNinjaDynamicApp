@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+<h3>HTML and Javascript Example</h3>
+<div id="button">
+<button onclick="callWelcome()">Click me</button>
+</div>
+<div id="demo" hidden>
+	<p id="welcometext" hidden></p>
+
+</div>
+
+
+<script>
+function callWelcome() {
+	document.getElementById("demo").style.display="block";	
+  document.getElementById("welcometext").innerHTML = "Welcome to Javascript Hands On";
+  document.getElementById("button").style.display="none";
+}
+</script>
+</body>
+</html>

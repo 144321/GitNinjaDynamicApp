@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+function callWelcome() {
+	document.getElementById("demo").style.display="block";	
+ // document.getElementById("welcometext").innerHTML = "Welcome to Javascript Hands On";
+  document.getElementById("button").style.display="none";
+}
+function validate() {
+	var fname=document.javaform.fname.value;
+	var lname=document.javaform.lname.value;
+	var email=document.javaform.email.value;
+	var contact=document.javaform.contact.value;
+	var amp = email.indexOf("@")
+	if(fname == null || fname == "")
+	{
+		alert("First Name is Required")
+		//document.javaform.fname.focus();
+		return false;
+		
+	}
+	else if(lname == null || lname == "")
+	{
+		alert("Last Name is Required")
+		//document.javaform.lname.focus();
+		return false;
+	}
+	else if(email == null || email == "")
+	{
+		alert("Email Name is Required")
+		//document.javaform.email.focus();
+		return false;
+	}
+	else if(amp.length < 1 || amp.length >1)
+	{
+		alert("Email is Not Valid")
+		//document.javaform.email.focus();
+		return false;
+	}
+	else if(contact == null || contact == "")
+	{
+		alert("Contact is Required")
+		//document.javaform.contact.focus();
+		return false;
+	}
+	
+	return true;
+	//document.write("Heloo" + "&nbsp;" + document.getElementById("fname").value + "&nbsp;" + document.getElementById("lname").value);
+}
+</script>
+</head>
+<body style="background-color:powderblue">
+<center>
+<h3>Welcome to Ninja Program</h3><br/><br/>
+
+</center>
+<div id="button">
+<center>
+<p> We want to Record Your Details.<br/> Please click on the below Button</p>
+
+<button onclick="callWelcome()">Click Here</button>
+</center>
+</div>
+<center>
+<div id="demo" hidden>
+
+	<form name="javaform" method="post" action="EnterDataServlet" onsubmit="return validate()" >
+	<label>Enter Your First Name : </label><input id="fname" type="text" name="fname" value=""/><br/>
+	<label>Enter Your Last Name : </label><input id="lname" type="text" name="lname" value=""/><br/>
+	<label>Enter Your Email Id : </label><input id="email" type="email" name="email" value=""/><br/>
+	<label>Enter Your Contact Number : </label><input id="contact" type="text" name="contact" value=""/><br/><br/>
+	<input type="submit"  value="Submit" />
+	</form>
+
+</div>
+</center>
+
+
+</body>
+</html>

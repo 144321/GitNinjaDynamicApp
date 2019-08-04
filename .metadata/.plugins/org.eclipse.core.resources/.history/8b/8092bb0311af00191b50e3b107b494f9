@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>HTML and Javascript Example</h1>
+
+<button name="clicke" value="click" onclick="callWelcome()">Try This</button>
+<h3 id="call_welcome" hidden='true'></h3>
+</body>
+</html>

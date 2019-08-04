@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+function callWelcome() {
+	document.getElementById("demo").style.display="block";	
+ // document.getElementById("welcometext").innerHTML = "Welcome to Javascript Hands On";
+  document.getElementById("button").style.display="none";
+}
+function validate() {
+	var fname=document.javaform.fname.value;
+	var lname=document.javaform.lname.value;
+	var email=document.javaform.email.value;
+	var contact=document.javaform.contact.value;
+	document.write("Heloo" + "&nbsp;" + document.getElementById("fname").value + "&nbsp;" + document.getElementById("lname").value);
+}
+</script>
+</head>
+<body style="background-color:powderblue">
+<center>
+<h3>Welcome to Ninja Program</h3><br/><br/>
+
+</center>
+<div id="button">
+<center>
+<p> We want to Record Your Details.<br/> Please click on the below Button</p>
+
+<button onclick="callWelcome()">Click Here</button>
+</center>
+</div>
+<div id="demo" hidden>
+
+	<form name="javaform" method="POST" action="" onsubmit="return validate()">
+	<label>Enter Your First Name : </label><input id="fname" type="text" name="fname" value=""/>
+	<label>Enter Your Last Name : </label><input id="lname" type="text" name="lname" value=""/>
+	<label>Enter Your Email Id : </label><input id="email" type="text" name="email" value=""/>
+	<label>Enter Your Contact Number : </label><input id="contact" type="text" name="contact" value=""/>
+	<input type="submit" name="submit" value="Submit Date" onclick="validate()"/>
+	</form>
+
+</div>
+
+
+
+</body>
+</html>

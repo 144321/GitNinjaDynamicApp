@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function callWelcome()
+	{
+		document.getElementById("call_welcome").innerHTML="Welcome to JavaScript Hands On"
+	}
+
+</script>
+</head>
+<body>
+<h3>HTML and Javascript Example</h3>
+
+<button name="clicke" value="click" onclick="callWelcome()">Try This</button>
+<h3 id="call_welcome" hidden='true'></h3>
+</body>
+</html>
